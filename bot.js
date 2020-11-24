@@ -1,4 +1,4 @@
-require('dotenv').config();
+
 var cron = require("cron");
 const { Client } = require('discord.js');
 const { contentType } = require('mime-types');
@@ -162,4 +162,4 @@ let channel = client.channels.cache.get('777899451914125342');
   scheduledMessage9.start()
   scheduledMessage10.start()
 
-client.login(process.env.DISCORDJS_BOT_TOKEN);
+client.login('NzgwNzc4NDI2MzMxOTU1MjMw.X70Ckg.yx3B17RoXEmi1Qx8I182X9ow6F4');
