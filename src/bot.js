@@ -1,14 +1,11 @@
 require('dotenv').config();
-
 var cron = require("cron");
 const { Client } = require('discord.js');
 const { contentType } = require('mime-types');
 const client = new Client();
 const guild = '753619195664793641'
 const prefix = "!"
-
 let channel = client.channels.cache.get('777899451914125342');
-
 var d = new Date();
 var weekday = new Array(7);
 weekday[0] = "Niedziela";
@@ -18,9 +15,7 @@ weekday[3] = "Środa";
 weekday[4] = "Czwartek";
 weekday[5] = "Piątek";
 weekday[6] = "Sobota";
-
 var n = weekday[d.getDay()];
-
 client.on('message', msg => {
     if (msg.content === 'tst') {
         var wiadomosc = new Array(5);
@@ -166,7 +161,5 @@ let channel = client.channels.cache.get('777899451914125342');
   scheduledMessage8.start()
   scheduledMessage9.start()
   scheduledMessage10.start()
-
-
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
