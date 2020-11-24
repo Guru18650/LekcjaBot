@@ -162,4 +162,4 @@ let channel = client.channels.cache.get('777899451914125342');
   scheduledMessage9.start()
   scheduledMessage10.start()
 
-client.login('NzgwNzc4NDI2MzMxOTU1MjMw.X70Ckg.yx3B17RoXEmi1Qx8I182X9ow6F4');
+client.login(process.env.BOT_TOKEN);
