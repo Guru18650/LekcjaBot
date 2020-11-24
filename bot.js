@@ -150,7 +150,6 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-
   scheduledMessage1.start()
   scheduledMessage2.start()
   scheduledMessage3.start()
