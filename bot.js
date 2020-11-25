@@ -6,7 +6,7 @@ const client = new Client();
 let channel = client.channels.cache.get('777899451914125342');
 var d = new Date();
   
-let scheduledMessage1 = new cron.CronJob('05 00 09 * * *', () => {
+let scheduledMessage1 = new cron.CronJob('05 00 07 * * *', () => {
   var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@gr2 8:00, zaczynamy WF!";
@@ -19,7 +19,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage2 = new cron.CronJob('05 50 09 * * *', () => {
+  let scheduledMessage2 = new cron.CronJob('05 50 07 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 8:50, czas na matematykę!";
@@ -32,7 +32,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage3 = new cron.CronJob('05 40 10 * * *', () => {
+  let scheduledMessage3 = new cron.CronJob('05 40 8 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 9:40, czas na PPR!";
@@ -45,7 +45,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage4 = new cron.CronJob('05 30 11 * * *', () => {
+  let scheduledMessage4 = new cron.CronJob('05 30 9 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 10:30, zaczynami informatykę stosowaną!";
@@ -58,7 +58,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage5 = new cron.CronJob('05 20 12 * * *', () => {
+  let scheduledMessage5 = new cron.CronJob('05 20 10 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 11:20, druga godzina informatyki stosowanej!";
@@ -71,7 +71,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage6 = new cron.CronJob('05 20 13 * * *', () => {
+  let scheduledMessage6 = new cron.CronJob('05 20 11 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 12:20, zaczynamy fizykę!";
@@ -84,7 +84,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage7 = new cron.CronJob('05 10 14 * * *', () => {
+  let scheduledMessage7 = new cron.CronJob('05 10 12 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 13:10, zaczynamy edukację regionalną!";
@@ -97,7 +97,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-  let scheduledMessage8 = new cron.CronJob('05 00 15 * * *', () => {
+  let scheduledMessage8 = new cron.CronJob('05 00 13 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "@everyone 14:00, @gr1 rozpoczyna angielski! @gr2 sprechen Sie Deutsch?";
@@ -110,7 +110,7 @@ let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
 
-    let scheduledMessage9 = new cron.CronJob('05 50 15 * * *', () => {
+    let scheduledMessage9 = new cron.CronJob('05 50 13 * * *', () => {
       var d = new Date();
         var wiadomosc = new Array(5);
         wiadomosc[1] = "@everyone 14:50, zaczynamy polski!";
@@ -123,7 +123,7 @@ let channel = client.channels.cache.get('777899451914125342');
             channel.send(msge);
   });
 
-  let scheduledMessage10 = new cron.CronJob('05 40 16 * * *', () => {
+  let scheduledMessage10 = new cron.CronJob('05 40 14 * * *', () => {
     var d = new Date();
     var wiadomosc = new Array(5);
     wiadomosc[1] = "Dzisiaj lekcji brak :sob:";
@@ -161,4 +161,4 @@ var msge = wiadomosc[d.getDay()];
   scheduledMessage9.start()
   scheduledMessage10.start()
 
-client.login(process.env.BOT_TOKEN);
+client.login('NzgwNzc4NDI2MzMxOTU1MjMw.X70Ckg.jr7s2NHJHR3d3HACMBoFjcvEkEE');
