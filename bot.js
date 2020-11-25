@@ -3,32 +3,8 @@ var cron = require("cron");
 const { Client } = require('discord.js');
 const { contentType } = require('mime-types');
 const client = new Client();
-const guild = '753619195664793641'
-const prefix = "!"
 let channel = client.channels.cache.get('777899451914125342');
 var d = new Date();
-var weekday = new Array(7);
-weekday[0] = "Niedziela";
-weekday[1] = "Poniedziałek";
-weekday[2] = "Wtorek";
-weekday[3] = "Środa";
-weekday[4] = "Czwartek";
-weekday[5] = "Piątek";
-weekday[6] = "Sobota";
-var n = weekday[d.getDay()];
-client.on('message', msg => {
-    if (msg.content === 'tst') {
-        var wiadomosc = new Array(5);
-        wiadomosc[1] = "1";
-        wiadomosc[2] = "2";
-        wiadomosc[3] = "3";
-        wiadomosc[4] = "4";
-        wiadomosc[5] = "5";
-    var msge = wiadomosc[d.getDay()];
-    let channel = client.channels.cache.get('777899451914125342');
-            channel.send(msge);
-    }
-  });
   
 let scheduledMessage1 = new cron.CronJob('05 00 08 * * *', () => {
     var wiadomosc = new Array(5);
