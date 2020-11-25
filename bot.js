@@ -161,4 +161,4 @@ var msge = wiadomosc[d.getDay()];
   scheduledMessage9.start()
   scheduledMessage10.start()
 
-client.login('NzgwNzc4NDI2MzMxOTU1MjMw.X70Ckg.jr7s2NHJHR3d3HACMBoFjcvEkEE');
+client.login(process.env.BOT_TOKEN);
