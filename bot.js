@@ -1,11 +1,15 @@
 
 var cron = require("cron");
-const { Client } = require('discord.js');
+const discord = require ('discord.js');
+const { Client, Message } = require('discord.js');
 const { contentType } = require('mime-types');
-const client = new Client();
+const client = new discord.Client();
 let channel = client.channels.cache.get('777899451914125342');
 var d = new Date();
-  
+const prefix = "p!";  
+client.zadania = require ("./zadania.json");
+const fs = require("fs");
+
 let scheduledMessage1 = new cron.CronJob('05 00 07 * * *', () => {
   var d = new Date();
     var wiadomosc = new Array(5);
@@ -91,7 +95,7 @@ let channel = client.channels.cache.get('777899451914125342');
     wiadomosc[2] = "@everyone 13:10, czas na historię!";
     wiadomosc[3] = "@everyone 13:10, religia się rozpoczyna!";
     wiadomosc[4] = "@everyone 13:10, bądźmy bezpieczni na EDB!";
-    wiadomosc[5] = "@everyone 13:10, ulubiona lekcja czyli filozofia!";
+    wiadomosc[5] = "@everyone 13:10, więc czas na RZEŹ... ( aka. filozofia :smile: ) ";
 var msge = wiadomosc[d.getDay()];
 let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
@@ -135,7 +139,7 @@ var msge = wiadomosc[d.getDay()];
 let channel = client.channels.cache.get('777899451914125342');
         channel.send(msge);
   });
-
+/*
   client.on('message', msg => {
     if (msg.content === 'test') {
       var d = new Date();
@@ -150,6 +154,57 @@ var msge = wiadomosc[d.getDay()];
     }
   });
 
+  client.on('message', (message) => {
+    if (message.content.startsWith (prefix + "ping")) {
+      message.reply("pong!");
+    }
+    if (message.content.startsWith (prefix + "zapisz")) {
+
+      const args = message.content.slice(8).trim().split(/ +/g);
+      let [nazwa, przedmiot, rok, miesiac, dzien, godzina, minuta, platforma] = args;
+
+      client.zadania [nazwa] = {
+        namee: nazwa,
+        przedmiott: przedmiot,
+        year: rok,
+        month: miesiac,
+        day: dzien,
+        hour: godzina,
+        minute: minuta,
+        platform: platforma
+      
+      }
+
+      fs.writeFile ("./zadania.json", JSON.stringify (client.zadania, null, 4), err => {
+if (err) throw err;
+message.channel.send ("zapisano");
+      });
+    }
+    if(message.content.startsWith (prefix + "wczytaj")) {
+      name = message.content.slice(9).trim();
+
+let przedmiot = client.zadania[name].przedmiott;
+let year = client.zadania[name].year;
+let month = client.zadania[name].month;
+let day = client.zadania[name].day;
+let hour = client.zadania[name].hour;
+let minute = client.zadania[name].minute;
+let platform = client.zadania[name].platform;
+message.channel.send ("Nazwa: " + name + "\nPrzedmiot: " + przedmiot + "\nData: " + day + "." + month + "." + year + "\nGodzina: " + hour + "." + minute + "\nPlatforma: " + platform );
+    };
+
+    if(message.content.startsWith (prefix + "czysc")) { 
+fs.rm("./zadania.json", err => {
+if (err) throw err;
+fs.copyFile("./def/zadania.json", "./", err =>{
+  if (err) throw err;
+});
+message.channel.send ("wyczyszczono");
+});
+
+    };
+  });
+*/
   scheduledMessage1.start()
   scheduledMessage2.start()
   scheduledMessage3.start()
@@ -162,3 +217,4 @@ var msge = wiadomosc[d.getDay()];
   scheduledMessage10.start()
 
 client.login(process.env.BOT_TOKEN);
+//process.env.BOT_TOKEN
