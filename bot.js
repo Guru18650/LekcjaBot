@@ -7,7 +7,7 @@ const client = new discord.Client();
 let channel = client.channels.cache.get('777899451914125342');
 var d = new Date();
 const prefix = "p!";  
-client.zadania = require ("./zadania.json");
+//client.zadania = require ("./zadania.json");
 const fs = require("fs");
 
 let scheduledMessage1 = new cron.CronJob('05 00 07 * * *', () => {
