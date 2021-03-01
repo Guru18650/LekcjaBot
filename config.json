@@ -1,0 +1,17 @@
+{
+  "prefix": "p!",
+  "bot_timezone": "Europe/Warsaw",
+  "activity_name": "MS Teams 👥",
+  "activity_type": "WATCHING",
+  "reminder_cid": "777899451914125342",
+  "dev": [
+    "339714090723311618",
+    "454314799195619360"
+  ],
+
+  "mst_login_fail": "❌ Nie zalogowano do MST! Spróbuj ponownie później...",
+
+  "embed_color": "0x5d00ff",
+  "embed_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/512px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png",
+  "embed_footer": "Przypominacz3000"
+}

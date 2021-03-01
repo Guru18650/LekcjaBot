@@ -1,18 +1,20 @@
 {
-  "dependencies": {
-    "cron": "^1.8.2",
-    "discord.js": "^12.5.0",
-    "dotenv": "^8.2.0",
-    "fs": "^0.0.1-security"
-  },
   "name": "LekcjaBot",
   "version": "1.0.0",
-  "main": "discord.js",
+  "description": "",
+  "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "cron": "^1.8.2",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "enmap": "^5.8.4",
+    "fs": "0.0.1-security",
+    "puppeteer": "^7.1.0"
+  }
 }
